@@ -8,3 +8,6 @@ spring:
     url: jdbc:postgresql://SUPER-BUSH
     username: owner
     password: DONTSTEALMYPASS
+#  batch:
+#    jdbc:
+#      initialize-schema: "always"
