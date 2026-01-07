@@ -18,4 +18,11 @@ public class ProblemService {
     public List<Problem> findAll() {
         return problemRepository.findAll();
     }
+    public Problem findProblem(int id){
+        return problemRepository.findAll().stream().filter(
+                p -> p.id() == id
+        )
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Problem not found!"));
+    }
 }
