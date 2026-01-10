@@ -2,6 +2,8 @@ package com.hardik.auth;
 
 import com.hardik.auth.repository.AuthRepository;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -37,6 +39,15 @@ public class CustomUserDetails {
                 .build();
 
         jdbcUserDetailsManager.createUser(user);
+
+        var newContext = SecurityContextHolder.createEmptyContext();
+        newContext
+                .setAuthentication(
+                        new UsernamePasswordAuthenticationToken(
+                                username, passwordEncoder.encode(password)
+                        )
+                );
+        SecurityContextHolder.setContext(newContext);
 
         return ResponseEntity.ok(user.getUsername());
     }
