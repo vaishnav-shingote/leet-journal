@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="problems-service" />
         <module name="auth" />
+        <module name="gateway" />
         <module name="batch-service" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="auth" options="-parameters" />
       <module name="batch-service" options="-parameters" />
+      <module name="gateway" options="-parameters" />
       <module name="problems-service" options="-parameters" />
     </option>
   </component>
