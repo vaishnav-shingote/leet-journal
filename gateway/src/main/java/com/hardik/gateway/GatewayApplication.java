@@ -30,13 +30,4 @@ public class GatewayApplication {
                 .GET("/problems/**", http())
                 .build();
     }
-
-    @Bean
-    @Order()
-    RouterFunction<ServerResponse> frontendRoutes(){
-        return route ()
-                .before(BeforeFilterFunctions.uri("http://localhost:5173"))
-                .GET("/**", http())
-                .build();
-    }
 }

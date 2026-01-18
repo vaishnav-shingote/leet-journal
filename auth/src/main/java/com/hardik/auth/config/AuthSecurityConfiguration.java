@@ -48,23 +48,23 @@ class AuthSecurityConfiguration {
     }
 
     // Instead define bean of JdbcRegisteredClientRepository or something idk anymore tbh look at the sample and try to understnad
-    @Bean
-    RegisteredClientRepository registeredClientRepository(JdbcTemplate jdbcTemplate) {
-        JdbcRegisteredClientRepository jdbcRegisteredClientRepository = new JdbcRegisteredClientRepository(jdbcTemplate);
-
-        // I hate this shit. its not supposed to be this hard!!
-
-        RegisteredClient registeredClient = RegisteredClient
-                .withId("client-id")
-                .clientName("client-name")
-                .clientSecret("{noop}secret")
-                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
-                .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-                .scope("user")
-                .build();
-
-        jdbcRegisteredClientRepository.save(registeredClient);
-        return jdbcRegisteredClientRepository;
-    }
+//    @Bean
+//    RegisteredClientRepository registeredClientRepository(JdbcTemplate jdbcTemplate) {
+//        JdbcRegisteredClientRepository jdbcRegisteredClientRepository = new JdbcRegisteredClientRepository(jdbcTemplate);
+//
+//        // I hate this shit. its not supposed to be this hard!!
+//
+//        RegisteredClient registeredClient = RegisteredClient
+//                .withId("client-id1")
+//                .clientName("client-name")
+//                .clientSecret("{noop}secret")
+//                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+//                .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
+//                .scope("user")
+//                .build();
+//
+//        jdbcRegisteredClientRepository.save(registeredClient);
+//        return jdbcRegisteredClientRepository;
+//    }
 
 }
