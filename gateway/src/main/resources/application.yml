@@ -18,6 +18,9 @@ spring:
         provider:
           spring:
             issuer-uri: http://localhost:8002
+  threads:
+    virtual:
+      enabled: true
 server:
   port: 8000
 logging:
