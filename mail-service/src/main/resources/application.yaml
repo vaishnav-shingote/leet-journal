@@ -1,0 +1,17 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: mail-service
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${GMAIL_MAIL_USERNAME}
+    password: ${GMAIL_MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
