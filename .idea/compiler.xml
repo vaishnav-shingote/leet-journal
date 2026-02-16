@@ -10,12 +10,14 @@
         <module name="auth" />
         <module name="mail-service" />
         <module name="gateway" />
+        <module name="ai-service" />
         <module name="batch-service" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ai-service" options="-parameters" />
       <module name="auth" options="-parameters" />
       <module name="batch-service" options="-parameters" />
       <module name="gateway" options="-parameters" />

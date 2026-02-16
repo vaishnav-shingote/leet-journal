@@ -40,4 +40,14 @@ public class GatewayApplication {
                 .GET("/mail/**", http())
                 .build();
     }
+
+    @Bean
+    RouterFunction<ServerResponse> aiRoute(){
+        return route ()
+                .before(BeforeFilterFunctions.uri("http://localhost:8003/"))
+                .before(BeforeFilterFunctions.rewritePath("/ai/", "/"))
+                .filter(TokenRelayFilterFunctions.tokenRelay())
+                .GET("/ai/**", http())
+                .build();
+    }
 }
