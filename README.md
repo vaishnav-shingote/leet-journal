@@ -140,6 +140,13 @@ Contributions are welcome. If you are planning a larger change, open an issue fi
 - Tests for new behavior when practical.
 - Documentation (future implementation) updates when behavior or setup changes.
 
+### Resources that can help you
+- The Spring Documentation.
+	- [Spring Authorization Server](https://docs.spring.io/spring-authorization-server/reference/index.html)
+    - [Spring Cloud Gateway WebMVC](https://docs.spring.io/spring-cloud-gateway/reference/spring-cloud-gateway-server-webmvc.html)
+    - [Spring AI](https://docs.spring.io/spring-ai/reference/)
+- [Dan Vega's](https://www.youtube.com/@DanVega) youtube tutorials.
+
 ### Coding conventions
 
 - Follow the existing Spring Boot structure in each service.
