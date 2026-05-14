@@ -119,30 +119,89 @@ Repeat the same pattern for the other services.
 
 ## Contributing
 
-Contributions are welcome. If you are planning a larger change, open an issue first so the approach can be aligned before implementation.
+Thank you for your interest in contributing to Leet Journal!
 
-### How to contribute
+### Before Contributing
 
-1. Fork the repository.
-2. Create a feature branch from `master`.
-3. Make the smallest focused change that solves the problem.
-4. Run the relevant service tests before opening a pull request.
-5. Open a pull request with a clear description of the change and any setup or verification steps.
+- Check existing issues before opening a new one.
+- For larger changes, open an issue first to discuss the approach.
+- Beginners are encouraged to start with documentation or small fixes.
 
-### What I look for
+---
 
-- Small, reviewable pull requests.
-- Clear commit messages and PR descriptions.
-- Tests for new behavior when practical.
-- Documentation (future implementation) updates when behavior or setup changes.
+### Google GenAI API Key Setup
 
-### Coding conventions
+The `ai-service` requires a Google GenAI API key to enable AI-powered DSA assistance.
 
-- Follow the existing Spring Boot structure in each service.
-- Keep controllers thin and push business logic into services.
-- Prefer explicit configuration in the service `application.yml` files.
-- Avoid introducing unnecessary dependencies unless they materially improve the codebase.
+### Steps to get the API key
+
+1. Visit Google AI Studio:
+
+https://aistudio.google.com/app/apikey
+
+2. Sign in with your Google account.
+
+3. Create a new API key.
+
+4. Add the API key to your environment variables:
+
+```bash
+GOOGLE_GENAI_API_KEY=your_api_key
+```
+
+5. Restart the `ai-service` after updating the environment variable.
+
+---
+
+### Contribution Workflow
+
+1. Fork the repository
+
+2. Clone your fork locally
+
+```bash
+git clone https://github.com/your-username/leet-journal.git
+```
+
+3. Create a new branch
+
+```bash
+git checkout -b feature-name
+```
+
+4. Make your changes
+
+5. Commit your changes
+
+```bash
+git commit -m "Describe your changes"
+```
+
+6. Push your branch
+
+```bash
+git push origin feature-name
+```
+
+7. Open a Pull Request with a clear description of your changes
+
+---
+
+### Pull Request Guidelines
+
+- Keep pull requests small and focused.
+- Write clear commit messages and PR descriptions.
+- Update documentation when setup or behavior changes.
+- Test your changes whenever practical before opening a PR.
+
+---
+
+### Coding Conventions
+
+- Follow the existing Spring Boot structure.
+- Keep controllers lightweight.
+- Move business logic into service classes.
+- Avoid unnecessary dependencies.
 
 ## Project Status
-
 This project is under active development and is intended to grow as an open source learning platform for LeetCode practice and DSA tooling.
