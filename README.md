@@ -1,4 +1,7 @@
 # Leet Journal
+# GSSOC'26 contributors [read this first](https://github.com/hardikxk/leet-journal/discussions/30#discussion-10072805)
+<img width="1080" height="1080" alt="image" src="https://github.com/user-attachments/assets/2b3f0211-f6c5-47bd-b664-72e0758318da" />
+
 
 Leet Journal is a Spring Boot microservices project for tracking LeetCode progress, managing problem metadata, authenticating users, sending mail, and experimenting with AI-assisted problem solving.
 
