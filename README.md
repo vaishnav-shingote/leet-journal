@@ -124,8 +124,13 @@ Repeat the same pattern for the other services.
 - `GET http://localhost:9000/mail/mime?to=...&subject=...&text=...`
 - `GET http://localhost:9000/ai/chat?prompt=...`
 
-## Contributing
+## Developer Documentation
 
+- [Contributing Guide](CONTRIBUTING.md)
+- [Project Setup Guide](SETUP.md)
+
+## Project Status
+This project is under active development and is intended to grow as an open source learning platform for LeetCode practice and DSA tooling.
 Contributions are welcome. If you are planning a larger change, open an issue first so the approach can be aligned before implementation.
 
 ### How to contribute
